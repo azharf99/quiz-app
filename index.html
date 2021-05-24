@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App by Azhar FA</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN untuk Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-success">
+    <!-- start Quiz button -->
+    <div class="start_btn" id="start"><button class="btn btn-lg btn-light text-success fw-bold">Mulai Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box container w-50 v-50 bg-light rounded-3" id="info">
+        <div class="info-title border-bottom d-flex align-items-center justify-content-center fw-bold fs-3 mx-5"><span>Peraturan Quiz</span></div>
+        <div class="info-list mx-5 my-3">
+            <div class="info my-1">1. Kamu hanya punya waktu <span class="fw-bold text-primary">15 detik</span> setiap pertanyaan.</div>
+            <div class="info my-1">2. Ketika sudah memilih jawaban, tidak dapat kembali.</div>
+            <div class="info my-1">3. Tidak bisa memilih jawaban jika waktu telah habis.</div>
+            <div class="info my-1">4. Tidak boleh keluar dari quiz ketika sedang bermain.</div>
+            <div class="info my-1">5. Di akhir quiz kamu dapat melihat jumlah poin.</div>
+        </div>
+        <div class="buttons d-flex align-items-center justify-content-between border-top mx-5 py-4">
+            <button class="gakJadi btn btn-outline-primary">Keluar Quiz</button>
+            <button class="lanjut btn btn-primary">Lanjutkan</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box w-50 bg-light rounded-3" id="quiz_box">
+        <header class="px-3 bg-light rounded-3 d-flex align-items-center justify-content-between">
+            <div class="title fs-5 fw-bold">Quiz Mantap Djiwa</div>
+            <div class="timer bg-dark rounded-3 text-light d-flex align-items-center justify-content-between py-2 px-2">
+                <div class="time_left_txt px-2">Sisa waktu</div>
+                <div class="timer_sec fs-6 px-2 bg-danger rounded-3 fs-5">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <!-- Bagian ini akan diisi javascript -->
+        <section class="py-2 px-3">
+            <div class="que_text fs-4 fw-bold" id="question">
+            </div>
+            <div class="option_list d-block py-2">
+            </div>
+        </section>
+
+        <!-- footer Quiz Box -->
+        <footer class="d-flex border-top justify-content-between align-items-center mx-2 px-2 py-3">
+            <div class="total_que">
+            </div>
+            <button class="next_btn btn btn-primary">Selanjutnya</button>
+        </footer>
+    </div>
+    <!-- Result Box -->
+    <div class="result_box bg-light flex-column py-4 px-4 rounded-3 text-center" id="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <p class="complete_text">Quiz sudah selesai!</p>
+        <!-- Bagian di awah ini diisi javasript -->
+        <div class="score_text fs-4 fw-bold">
+        </div>
+        <div class="buttons mt-5">
+            <button class="restart btn btn-primary py-2 px-3 mx-3 ">Ulangi</button>
+            <button class="quit btn btn-outline-primary py-2 px-3 mx-3 ">Keluar aja</button>
+        </div>
+    </div>
+    <script src="aksi.js"></script>
+</body>
+</html>
